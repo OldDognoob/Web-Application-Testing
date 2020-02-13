@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Dashboard(){
+function Dashboard(props){
     return(
         <div>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+           <button onClick={props.handleStrikes}>Strike</button>
+            <button onClick={props.handleBalls}>Ball</button>
+            <button onClick={props.handleFouls}>Foul</button>
+            <button onClick={props.handleHits}>Hit</button>
         </div>
     )
 }

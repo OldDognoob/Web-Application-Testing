@@ -16,7 +16,7 @@ function App(){
 
   const handleBalls = () =>{
     if(balls < 4){
-      setBalls(+1);
+      setBalls(strikes +1);
     }else{
       setBalls(0);
       setStrikes(0);
@@ -26,7 +26,7 @@ function App(){
 
   const handleStrikes = () =>{
     if (strikes < 3){
-      setStrikes(+1);
+      setStrikes( balls +1);
     }else{
       setStrikes(0);
       setBalls(0);
@@ -36,12 +36,13 @@ function App(){
    const handleHits = () =>{
      setBalls(0);
      setStrikes(0);
+     setHits(hits +1);
    }
 
    const handleFoul = () =>{
     if(strikes < 2){
       setFouls( fouls +1)
-      setStrikes(+1)
+      setStrikes(strikes +1)
     }else{
       setFouls( fouls +1)
     }
